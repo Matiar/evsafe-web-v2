@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* In-app UI tokens (-2.1) */
+  --color-brand: #1f1f1f;
+  --color-background: #f4f4f4;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f9fafb;
+  --color-text: #0c111d;
+  --color-border: #eaeaea;
+  --color-divider: #ededf3;
+  --color-feed-muted: #99a2ad;
+  --color-feed-body: #606060;
+  --color-feed-link: #4c76b5;
+  --color-serial-red: #e73417;
+  --color-accent-red: #f97066;
+  --color-search-border: #d6d6d6;
+
+  /* Official eVS brand (-2.6) */
+  --color-evs-blue: #578eca;
+  --color-evs-teal: #3cbdb2;
+  --color-evs-grey: #7f7f7f;
+  --color-evs-light-grey: #e6e6e6;
+
+  --font-inter: var(--font-inter-family), system-ui, sans-serif;
+  --font-roboto: var(--font-roboto-family), system-ui, sans-serif;
+  --font-nunito: "Nunito", "Arial Rounded MT Bold", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-background text-text font-[family-name:var(--font-inter)];
+    font-size: 14px;
+  }
+}
+
+@layer utilities {
+  .evs-gradient {
+    background: linear-gradient(45deg, #578eca, #3cbdb2);
+  }
+
+  .evs-gradient-text {
+    background: linear-gradient(45deg, #578eca, #3cbdb2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
